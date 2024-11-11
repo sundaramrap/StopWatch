@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function StopWatch() {
   //state to hold the  timer time second and settime second
-  const [timer, setTimer] = useState("0:00");
+  const [timer, setTimer] = useState(0);
   const [runningTimer, setRunningTimer] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
 
@@ -32,7 +32,7 @@ function StopWatch() {
   const formattimeMath = (seconds) => {
     const minute = Math.floor(seconds / 60); //get the minute
     const secs = seconds % 60; //get the second
-    return `${minute}:${secs < 10 ? `0${secs}` : secs}`;
+    return `${minute}:${secs < 10 ? "0" : ""}${secs}`;
   };
 
   useEffect(() => {
@@ -41,7 +41,7 @@ function StopWatch() {
 
   return (
     <>
-      <h1>StopWatch</h1>
+      <h1>Stopwatch</h1>
       <p>Time :{formattimeMath(timer)}</p>
       <button onClick={ToggleSP}>{runningTimer ? "Stop" : "Start"}</button>
       <button onClick={ResetT}>Reset</button>
