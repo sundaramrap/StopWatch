@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function StopWatch() {
   //state to hold the  timer time second and settime second
-  const [timer, setTimer] = useState(0);
+  const [timer, setTimer] = useState("0:00");
   const [runningTimer, setRunningTimer] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
 
