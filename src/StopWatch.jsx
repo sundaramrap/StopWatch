@@ -42,7 +42,7 @@ function StopWatch() {
   return (
     <>
       <h1>Stopwatch</h1>
-      <p>Time : {formattimeMath(timer)}</p>
+      <p>Time: {formattimeMath(timer)}</p>
       <button onClick={ToggleSP}>{runningTimer ? "Stop" : "Start"}</button>
       <button onClick={ResetT}>Reset</button>
     </>
